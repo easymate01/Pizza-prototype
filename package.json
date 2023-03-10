@@ -1,0 +1,28 @@
+{
+  "name": "pizza-order-prototype-javascript-easymate01",
+  "version": "1.0.0",
+  "description": "No starter code is provided. Start from scratch!",
+  "main": "backend/server.js",
+  "scripts": {
+    "devStart": "nodemon backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-easymate01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-easymate01/issues"
+  },
+  "homepage": "https://github.com/CodecoolGlobal/pizza-order-prototype-javascript-easymate01#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21",
+    "tailwindcss": "^3.2.7"
+  }
+}

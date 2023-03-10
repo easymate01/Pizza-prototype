@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chechkout</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/public/checkout.js" defer></script>
+    <style>
+    
+#cart {
+  position: fixed;
+  margin-right: 30px;
+  
+  right: 0;
+  border-radius: 10px;
+}
+      body {
+        margin: 0;
+        font-family: "Montserrat";
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: white;
+       
+      }
+     
+      .col-md-7 {
+        width: 1500px
+      }
+      .card {
+        margin: 0;
+        background-image: url(https://soundglass.hu/wp-content/uploads/2023/03/bg_4.jpg);
+        height: 100%;
+      }
+      .card-top {
+        padding: 0.7rem 5rem;
+      }
+      .card-top a {
+        float: left;
+        margin-top: 0.7rem;
+      }
+      #logo {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 34px;
+      }
+      .card-body {
+        padding: 0 10rem 5rem 10rem;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .trash{
+        position: absolute;
+        cursor: pointer;
+        margin-left: 400px;
+        margin-top: 20px;
+      }
+
+      @media (max-width: 768px) {
+        .card-body {
+         
+          background-size: cover;
+          background-repeat: no-repeat;
+        }
+       
+      }
+      .row {
+        margin: 0;
+      }
+      .upper {
+        margin-top: 40px;
+        padding: 1rem 0;
+        justify-content: space-evenly;
+      }
+      #three {
+        border-radius: 1rem;
+        width: 22px;
+        height: 22px;
+        margin-right: 3px;
+        border: 1px solid blue;
+        text-align: center;
+        display: inline-block;
+      }
+      #payment {
+        margin: 0;
+        color: blue;
+      }
+      .icons {
+        margin-left: auto;
+      }
+      form span {
+        color: rgb(179, 179, 179);
+      }
+      form {
+        padding: 2vh 0;
+      }
+      input {
+        border: 1px solid rgba(0, 0, 0, 0.137);
+        padding: 1vh;
+        margin-bottom: 4vh;
+        outline: none;
+        width: 100%;
+        background-color: rgb(247, 247, 247);
+      }
+      input:focus::-webkit-input-placeholder {
+        color: transparent;
+      }
+      .header {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .left {
+        background-color: #48403a99;
+        padding: 2vh;
+      }
+      .left img {
+        width: 2rem;
+      }
+      .left .col-4 {
+        padding-left: 0;
+      }
+      .right .item {
+        padding: 0.3rem 0;
+      }
+      .right {
+        min-height: 700px;
+        background-color: #48403a99;
+        padding: 2vh;
+      }
+      .col-8 {
+        padding: 0 1vh;
+      }
+      .lower {
+        line-height: 2;
+      }
+      #backBtn{
+        transition: 0.2s;
+      }
+      #backBtn:hover{
+        color: #ff9771;
+      }
+      .btn {
+
+        background-image: linear-gradient(to right, #ff9771, rgba(255, 68, 0, 0.897));
+        display: flex;
+        justify-content: center;
+        color: white;
+        width: 100%;
+        font-size: 18px;
+        margin: 4vh 0 1.5vh 0;
+        padding: 1.5vh;
+        border-radius: 10px;
+      }
+      .btn:focus {
+        box-shadow: none;
+        outline: none;
+        box-shadow: none;
+        color: white;
+        -webkit-box-shadow: none;
+
+        transition: none;
+      }
+      .btn:hover {
+        color: white;
+        background-image: linear-gradient(to right, #ff9771, rgba(255, 68, 0, 0.534));
+      }
+      a {
+        color: white;
+        transition: 0.25s;
+      }
+      a:hover {
+        color: black;
+        text-decoration: none;
+        color: rgb(247, 138, 99);
+      }
+
+      
+      input[type="checkbox"] {
+        width: unset;
+        margin-bottom: unset;
+      }
+      #cvv {
+        background-image: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0.575),
+            rgba(255, 255, 255, 0.541)
+          ),
+          url("https://img.icons8.com/material-outlined/24/000000/help.png");
+        background-repeat: no-repeat;
+        background-position-x: 95%;
+        background-position-y: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/">🍕PizzaOrder </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li id="cart" class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="/chechkout"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="25"
+                      height="25"
+                      fill="currentColor"
+                      class="bi bi-cart"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                      />
+                    </svg>
+                    Kosár
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/api/pizza">Pizzák API</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/api/allergen">Allergén API</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/admin">Admin Login</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="card-top border-bottom text-center">
+        <a id="backBtn" class="" href="/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-arrow-bar-left"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5ZM10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5Z"
+            />
+          </svg>
+          Vissza a fincsi Pizzákhoz</a
+        >
+        <span id="logo">Kosár</span>
+      </div>
+      <div class="card-body">
+        <div class="row upper">
+          <div class="col-md-7">
+            <div class="left border">
+              <div class="row">
+                <span class="header">Számlázási adatok</span>
+                <div class="icons">
+                  <img src="https://img.icons8.com/color/48/000000/visa.png" />
+                  <img
+                    src="https://img.icons8.com/color/48/000000/mastercard-logo.png"
+                  />
+                  <img
+                    src="https://img.icons8.com/color/48/000000/maestro.png"
+                  />
+                </div>
+              </div>
+              <form>
+                <div class="form-icon">
+                  <span><i class="icon icon-user"></i></span>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control item"
+                    id="username"
+                    placeholder="Vezetéknén és Keresztnév"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control item"
+                    id="email"
+                    placeholder="Email"
+                  />
+                </div>
+                <div class="input-group mb-3">
+                  <input
+                    id="city"
+                    type="text"
+                    class="form-control"
+                    placeholder="Város"
+                    aria-label="City"
+                  />
+
+                  <input
+                    id="address"
+                    type="text"
+                    class="form-control"
+                    placeholder="Cím"
+                    aria-label="Address"
+                  />
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-5">
+            <div class="right border">
+              <div class="header">Rendelés összegző</div>
+              <p id="qt"></p>
+              <div id="root"></div>
+
+              <hr />
+              <div id="root2">
+                
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+body {
+  font-family: "Montserrat";
+  background-image: url("Img/bg_4.jpg");
+  /*background-image: url(https://soundglass.hu/wp-content/uploads/2023/03/bg_4.jpg);*/
+  background-position: fixed;
+  background-color: rgb(205 205 205);
+  color: white;
+}
+h1 {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.navbar-brand {
+  font-size: 26px;
+  margin-left: 4em;
+  margin-right: 2em;
+}
+h2 {
+  font-size: 22px;
+  margin-top: -5px;
+  font-weight: 600;
+}
+p {
+  font-size: 16px;
+}
+img {
+  cursor: pointer;
+}
+header {
+  position: relative;
+  z-index: 100;
+}
+li {
+  font-size: 20px;
+}
+.container {
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.background-image {
+  height: 340px;
+  position: absolute;
+  margin-top: 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-image: url(https://admin.kemencespizzeria.hu/media/banners/homeslide2.jpg);
+  background-size: cover;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.65
+  ); /* Change the alpha value to adjust the darkness */
+}
+#heading1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+#heading2 {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+/* Stlye for the filter */
+
+#filter-section {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+
+  border-bottom: 1px solid rgba(255, 68, 0, 0.425);
+}
+.widget {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+  margin: 0 auto;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.frame {
+  width: 340px;
+  border-radius: 25px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  background-color: rgba(240, 240, 240, 0.075);
+  backdrop-filter: blur(15px);
+  float: left;
+  margin: 10px;
+  margin-bottom: 90px;
+  padding: 5px;
+  border: 2px solid rgba(255, 68, 0, 0.452);
+  transition: 0.3s;
+}
+.frame:hover {
+  background-color: rgba(221, 221, 221, 0.219);
+}
+
+.product_image {
+  text-align: center;
+  margin-top: -60px;
+}
+.image_p {
+  width: 250px;
+}
+.product_infos {
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.addtoCart {
+  cursor: pointer;
+  width: 50px;
+  font-size: 22px;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid rgb(138, 138, 138);
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+.addtoCart:hover {
+  color: orangered;
+}
+.btn1 {
+  margin-bottom: 30px;
+}
+.hide {
+  display: none;
+}
+
+.par {
+  background-color: #78787887;
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  margin-top: -8px;
+}
+.btnIng {
+  text-align: center;
+  margin-right: 20px;
+}
+.btnI {
+  cursor: pointer;
+  color: orangered;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.btnI:hover {
+  border: 1px solid rgba(255, 68, 0, 0.452);
+  background-color: #ebebeb;
+}
+
+.descript {
+  height: 130px;
+}
+.nav-item {
+  margin-right: 20px;
+}
+.inp {
+  border: 1px solid;
+  width: 90px;
+  margin: 0 auto;
+}
+
+footer {
+  width: 100%;
+  background-color: rgb(116, 116, 116);
+  height: 270px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  display: block;
+}
+
+.btn {
+  background-color: #565656;
+}
+
+#cart {
+  position: fixed;
+  margin-right: 30px;
+  background-color: #565656;
+  right: 0;
+  border-radius: 10px;
+}
+#cart:hover {
+  background-color: #858585;
+  color: rgba(255, 68, 0, 0.76);
+}
+
+.toast-body,
+.-toast-body {
+  color: black;
+  padding: 20px;
+}
+.-toast-body:hover {
+  color: rgba(255, 68, 0, 0.76);
+}

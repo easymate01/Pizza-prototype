@@ -1,0 +1,102 @@
+{
+  "pizzas": [
+    {
+      "id": 0,
+      "name": "Szalámis pizza",
+      "ingredients": ["paradicsomos alap", "pick szalámi", "kukorica", "sajt"],
+      "price": 4250,
+      "allergens": [0, 1, 2],
+      "description": "A Szalámis pizza paradicsomos pizza alappal készül. Eredeti Pick szalámit teszünk rá és kukoricát, majd megszórjuk sajttal, így sütjük ropogósra samottos kemencében...",
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200883/large/szalamis.png"
+    },
+    {
+      "id": 1,
+      "name": "Sonkás-kukoricás",
+      "ingredients": ["paradicsomos alap", "kukorica", "sonka", "sajt"],
+      "price": 4750,
+      "allergens": [0, 1, 3],
+      "description": "A Sonkás-kukoricás pizza igazi kímélő pizza, bárki  bátran fogyaszthatja. A sonkás-kukoricás pizza paradicsomos alappal készül, majd gazdagon megszórjuk kukoricával...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/201/201368/large/sonkas-kukoricas.png"
+    },
+    {
+      "id": 2,
+      "name": "Húsimádó pizza",
+      "ingredients": [
+        "paradicsomos alap",
+        "szalonna",
+        "pick szalámi",
+        "sonka",
+        "kolbász",
+        "sajt"
+      ],
+      "price": 3800,
+      "allergens": [0, 1, 2],
+      "description": "A Húsimádó pizzánkat nem a diétázóknak találtuk ki - paradicsomos pizza alap, sonka, kolbász, szalonna, Pick szalámi és sajt gazdagon...",
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200940/large/husimado.png"
+    },
+    {
+      "id": 3,
+      "name": "Kukoricás pizza",
+      "ingredients": ["Paradicsomos alap", " Kukorica", " Sajt"],
+      "price": 3200,
+      "allergens": [0, 1],
+      "description": "A Kukoricás pizza igazi kímélő pizza, a vegetáriánusok is bátran fogyaszthatják. A kukoricás pizza paradicsomos alappal készül, majd gazdagon megszórjuk kukoricával és sajttal...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200850/large/kukoricas.png"
+    },
+    {
+      "id": 4,
+      "name": "Gyros pizza",
+      "ingredients": [
+        "tzatzikis alap",
+        "gyros hús",
+        "mozzarella",
+        "lilahagyma",
+        "gomba"
+      ],
+      "price": 4400,
+      "allergens": [0, 1, 3],
+      "description": "A Gyros pizza tésztáját tzatzikis alappal kenjük meg és gyroshússal, mozzarella sajttal, gombával és lilahagymával készítjük...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/211/211584/large/gyros.png"
+    },
+    {
+      "id": 5,
+      "name": "Sajtos pizza",
+      "ingredients": [
+        "paradicsomos alap",
+        "füstölt sajt",
+        "mozzarella",
+        "sajt"
+      ],
+      "price": 4200,
+      "allergens": [0, 1],
+      "description": "A Sonkás-kukoricás pizza igazi kímélő pizza, bárki  bátran fogyaszthatja. A sonkás-kukoricás pizza paradicsomos alappal készül, majd gazdagon megszórjuk kukoricával, sonkával és sajttal...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200847/large/sajtos.png"
+    },
+    {
+      "id": 6,
+      "name": "Bolognai pizza",
+      "ingredients": ["paradicsomos alap", "bolognai ragu", "sajt"],
+      "price": 3200,
+      "allergens": [0, 1],
+      "description": "A Bolognai pizzát hagyományos paradicsomos pizza alappal kenjük meg, majd bolognai szószt teszünk rá és megszórjuk sajttal...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200915/large/bolognai.png"
+    },
+    {
+      "id": 7,
+      "name": "Ínyenc pizza",
+      "ingredients": [
+        "tejfölös alap, brokkoli, füstölt sajt, tojás, sonka, sajt,"
+      ],
+      "price": 2090,
+      "allergens": [1, 7, 3],
+      "description": "Az Ínyenc pizzánk tésztáját tejfölös alappal kenjük meg, majd sonkával, brokkolival, főtt tojással, füstölt sajttal és sajttal szórjuk...",
+
+      "img": "https://admin.kemencespizzeria.hu/media/products/200/200955/large/inyenc.png"
+    }
+  ]
+}

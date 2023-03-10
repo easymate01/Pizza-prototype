@@ -1,0 +1,20 @@
+{
+  "allergens": [
+    {
+      "id": 0,
+      "name": "Glutén"
+    },
+    {
+      "id": 1,
+      "name": "Laktóz"
+    },
+    {
+      "id": 2,
+      "name": "Szója"
+    },
+    {
+      "id": 3,
+      "name": "Zeller"
+    }
+  ]
+}
